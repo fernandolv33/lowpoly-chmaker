@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://character_maker/scripts/npc_edit.gd" type="Script" id=1]
+
+[node name="NPCEdit" type="Spatial"]
+script = ExtResource( 1 )

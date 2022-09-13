@@ -1,0 +1,33 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="Modular Character"
+run/main_scene="res://character_maker/scenes/npc_editor.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+NpcMaker="*res://character_maker/scripts/npc_maker.gd"
+CharacterMaker="*res://character_creator/scripts/character_maker.gd"
+
+[display]
+
+window/size/width=1200
+window/size/height=800
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

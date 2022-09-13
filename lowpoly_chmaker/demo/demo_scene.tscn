@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://character_maker/nodes/npc_game.tscn" type="PackedScene" id=1]
+[ext_resource path="res://character_maker/nodes/npc_random.tscn" type="PackedScene" id=2]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 100, 100 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.0509804, 0.145098, 0.0470588, 1 )
+roughness = 0.8
+
+[sub_resource type="ProceduralSky" id=3]
+sky_top_color = Color( 0.215686, 0.588235, 0.792157, 1 )
+sky_horizon_color = Color( 0.407843, 0.54902, 0.662745, 1 )
+ground_bottom_color = Color( 0.0392157, 0.305882, 0.176471, 1 )
+ground_horizon_color = Color( 0.0106812, 0.0546875, 0.0333941, 1 )
+
+[sub_resource type="Environment" id=4]
+background_mode = 1
+background_sky = SubResource( 3 )
+background_color = Color( 0.270588, 0.435294, 0.513726, 1 )
+ambient_light_color = Color( 1, 1, 1, 1 )
+
+[node name="DemoScene" type="Spatial"]
+
+[node name="Floor" type="Spatial" parent="."]
+
+[node name="CSGMesh" type="CSGMesh" parent="Floor"]
+mesh = SubResource( 1 )
+material = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.992347, 0.031959, -0.119273, 0, 0.965926, 0.258819, 0.12348, -0.256838, 0.958534, 1.08751, 2.02107, 5.00394 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 4 )
+
+[node name="NPCGame" parent="." instance=ExtResource( 1 )]
+npc_file = "bob"
+randomize_npc = true
+animation_set = "standing"
+probability = 0.85
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.482963, 0.258819, -0.836516, -0.12941, 0.965926, 0.224144, 0.866025, -6.45239e-09, 0.5, -10, 6, 0 )
+light_color = Color( 0.376471, 0.376471, 0.376471, 1 )
+light_energy = 0.5
+light_indirect_energy = 0.3
+
+[node name="NPCRandom" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+probability = 1.0
+
+[node name="NPCRandom2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
+probability = 1.0
+
+[node name="NPCRandom3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0 )
+probability = 1.0
+animation_set = "working"
+
+[node name="NPCRandom4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
+probability = 1.0
+
+[node name="NPCRandom5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2 )
+probability = 1.0
+
+[node name="NPCRandom6" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2 )
+probability = 1.0
+animation_set = "sleeping"

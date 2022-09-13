@@ -1,0 +1,2805 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://character_maker/scripts/button_set_color.gd" type="Script" id=1]
+[ext_resource path="res://character_maker/scripts/button_prev_next.gd" type="Script" id=2]
+[ext_resource path="res://character_maker/scripts/button_remove_item.gd" type="Script" id=3]
+[ext_resource path="res://character_maker/scripts/button_switch.gd" type="Script" id=4]
+[ext_resource path="res://character_maker/scripts/npc_editor.gd" type="Script" id=8]
+[ext_resource path="res://character_maker/nodes/npc_edit.tscn" type="PackedScene" id=9]
+[ext_resource path="res://character_maker/scripts/button_set_custom_color.gd" type="Script" id=10]
+[ext_resource path="res://character_maker/scripts/button_set_roughness.gd" type="Script" id=11]
+[ext_resource path="res://character_maker/scripts/button_set_metalness.gd" type="Script" id=12]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.176471, 0.298039, 0.368627, 1 )
+roughness = 0.7
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.568627, 0.584314, 0.592157, 1 )
+roughness = 0.7
+
+[sub_resource type="Environment" id=3]
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 1, 0.894118, 0.819608, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 0.796078, 0.654902, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 0.729412, 0.541176, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.882353, 0.615686, 0.4, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.74902, 0.47451, 0.258824, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.521569, 0.317647, 0.160784, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.298039, 0.176471, 0.0823529, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.0431373, 0.0352941, 0.0313726, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 0.192157, 0.113725, 0.0588235, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.419608, 0.243137, 0.121569, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.67451, 0.627451, 0.372549, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0.160784, 0.443137, 0.203922, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0.0784314, 0.356863, 0.411765, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.239216, 0.294118, 0.321569, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.521569, 0.317647, 0.160784, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.6, 0.258824, 0.12549, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=22]
+bg_color = Color( 0.886275, 0.376471, 0.376471, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=23]
+bg_color = Color( 0.882353, 0.270588, 0.270588, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.878431, 0.141176, 0.141176, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.619608, 0.0745098, 0.0745098, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.890196, 0.6, 0.32549, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.666667, 0.329412, 0.196078, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=28]
+bg_color = Color( 0.423529, 0.231373, 0.0941176, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0.235294, 0.14902, 0.113725, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=30]
+bg_color = Color( 0.270588, 0.0705882, 0.027451, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="NPCEditor" type="Spatial"]
+script = ExtResource( 8 )
+
+[node name="Character" type="Spatial" parent="."]
+
+[node name="NPCEdit" parent="Character" instance=ExtResource( 9 )]
+
+[node name="Stage" type="Spatial" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="Stage"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07774, -0.207926 )
+width = 10.0
+height = 8.0
+depth = 3.0
+material = SubResource( 1 )
+
+[node name="CSGBox2" type="CSGBox" parent="Stage/CSGBox"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.92519, 0.535187 )
+operation = 2
+width = 10.0
+height = 8.0
+depth = 3.0
+material = SubResource( 2 )
+
+[node name="OmniLight" type="OmniLight" parent="Stage"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.29527, 3.08824, 1.73681 )
+
+[node name="OmniLight2" type="OmniLight" parent="Stage"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73651, 3.08824, 1.73681 )
+
+[node name="OmniLight3" type="OmniLight" parent="Stage"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.716201, 0.581095, 2.5232 )
+
+[node name="Camera" type="Camera" parent="Stage"]
+transform = Transform( 1, 0, 0, 0, 0.993109, 0.117191, 0, -0.117191, 0.993109, 0, 1.18179, 1.68435 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="C" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="HB" type="HBoxContainer" parent="CanvasLayer/C"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LeftControl" type="ColorRect" parent="CanvasLayer/C/HB"]
+margin_right = 340.0
+margin_bottom = 800.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.0196078, 0.0313726, 0.0509804, 1 )
+
+[node name="M" type="MarginContainer" parent="CanvasLayer/C/HB/LeftControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="V" type="VBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 332.0
+margin_bottom = 792.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+
+[node name="File" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V"]
+margin_right = 324.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+
+[node name="Randomize" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/File"]
+margin_right = 83.0
+margin_bottom = 24.0
+text = "Randomize"
+
+[node name="Pusher" type="ColorRect" parent="CanvasLayer/C/HB/LeftControl/M/V/File"]
+margin_left = 87.0
+margin_right = 119.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+color = Color( 1, 1, 1, 0 )
+
+[node name="FileName" type="LineEdit" parent="CanvasLayer/C/HB/LeftControl/M/V/File"]
+margin_left = 123.0
+margin_right = 233.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+placeholder_text = "Filename"
+placeholder_alpha = 0.4
+
+[node name="Load" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/File"]
+margin_left = 237.0
+margin_right = 279.0
+margin_bottom = 24.0
+text = "Load"
+
+[node name="Save" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/File"]
+margin_left = 283.0
+margin_right = 324.0
+margin_bottom = 24.0
+text = "Save"
+
+[node name="Sex" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V"]
+margin_top = 40.0
+margin_right = 324.0
+margin_bottom = 60.0
+
+[node name="Male" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Sex"]
+margin_right = 160.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Male"
+
+[node name="Female" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Sex"]
+margin_left = 164.0
+margin_right = 324.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Female"
+
+[node name="Skin" type="VBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V"]
+margin_top = 76.0
+margin_right = 324.0
+margin_bottom = 142.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin"]
+margin_right = 324.0
+margin_bottom = 14.0
+text = "Skin"
+
+[node name="Standard" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin"]
+margin_top = 22.0
+margin_right = 324.0
+margin_bottom = 38.0
+
+[node name="ffe4d1" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Standard"]
+margin_right = 42.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 5 )
+script = ExtResource( 1 )
+item_type = "base"
+my_color = Color( 1, 0.894118, 0.819608, 1 )
+
+[node name="ffcba7" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Standard"]
+margin_left = 46.0
+margin_right = 89.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 6 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+item_type = "base"
+my_color = Color( 1, 0.796078, 0.654902, 1 )
+
+[node name="ffba8a" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Standard"]
+margin_left = 93.0
+margin_right = 136.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 7 )
+script = ExtResource( 1 )
+item_type = "base"
+my_color = Color( 1, 0.729412, 0.541176, 1 )
+
+[node name="e19d66" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Standard"]
+margin_left = 140.0
+margin_right = 183.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 8 )
+script = ExtResource( 1 )
+item_type = "base"
+my_color = Color( 0.882353, 0.615686, 0.4, 1 )
+
+[node name="bf7942" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Standard"]
+margin_left = 187.0
+margin_right = 230.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 9 )
+script = ExtResource( 1 )
+item_type = "base"
+my_color = Color( 0.74902, 0.47451, 0.258824, 1 )
+
+[node name="935d34" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Standard"]
+margin_left = 234.0
+margin_right = 277.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 10 )
+script = ExtResource( 1 )
+item_type = "base"
+my_color = Color( 0.576471, 0.364706, 0.203922, 1 )
+
+[node name="6d4425" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Standard"]
+margin_left = 281.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 11 )
+script = ExtResource( 1 )
+item_type = "base"
+my_color = Color( 0.427451, 0.266667, 0.145098, 1 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin"]
+margin_top = 46.0
+margin_right = 324.0
+margin_bottom = 66.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="CustomColor" type="ColorPickerButton" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "base"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Rougness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Custom"]
+margin_left = 153.0
+margin_right = 207.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "base"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Custom"]
+margin_left = 211.0
+margin_top = 3.0
+margin_right = 265.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Skin/Custom"]
+margin_left = 269.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "base"
+
+[node name="Eyes" type="VBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V"]
+margin_top = 158.0
+margin_right = 324.0
+margin_bottom = 252.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes"]
+margin_right = 324.0
+margin_bottom = 14.0
+text = "Eyes"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes"]
+margin_top = 22.0
+margin_right = 324.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Type"]
+margin_right = 62.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Type"]
+margin_left = 66.0
+margin_right = 128.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "eyes"
+previous = true
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Type"]
+margin_left = 132.0
+margin_right = 195.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "eyes"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Type"]
+margin_left = 199.0
+margin_right = 324.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Standard" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes"]
+margin_top = 50.0
+margin_right = 324.0
+margin_bottom = 66.0
+
+[node name="0b0908" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Standard"]
+margin_right = 42.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 12 )
+script = ExtResource( 1 )
+item_type = "eyes"
+my_color = Color( 0.0431373, 0.0352941, 0.0313726, 1 )
+
+[node name="21140a" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Standard"]
+margin_left = 46.0
+margin_right = 89.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 13 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+item_type = "eyes"
+my_color = Color( 0.129412, 0.0784314, 0.0392157, 1 )
+
+[node name="6b3e1f" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Standard"]
+margin_left = 93.0
+margin_right = 136.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 14 )
+script = ExtResource( 1 )
+item_type = "eyes"
+my_color = Color( 0.419608, 0.243137, 0.121569, 1 )
+
+[node name="4e2e18" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Standard"]
+margin_left = 140.0
+margin_right = 183.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 15 )
+script = ExtResource( 1 )
+item_type = "eyes"
+my_color = Color( 0.305882, 0.180392, 0.0941176, 1 )
+
+[node name="1c4522" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Standard"]
+margin_left = 187.0
+margin_right = 230.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 16 )
+script = ExtResource( 1 )
+item_type = "eyes"
+my_color = Color( 0.109804, 0.270588, 0.133333, 1 )
+
+[node name="145b69" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Standard"]
+margin_left = 234.0
+margin_right = 277.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 17 )
+script = ExtResource( 1 )
+item_type = "eyes"
+my_color = Color( 0.0784314, 0.356863, 0.411765, 1 )
+
+[node name="2d393f" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Standard"]
+margin_left = 281.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 18 )
+script = ExtResource( 1 )
+item_type = "eyes"
+my_color = Color( 0.176471, 0.223529, 0.247059, 1 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes"]
+margin_top = 74.0
+margin_right = 324.0
+margin_bottom = 94.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "eyes"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Custom"]
+margin_left = 153.0
+margin_right = 207.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 0.2
+script = ExtResource( 11 )
+item_type = "eyes"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Custom"]
+margin_left = 211.0
+margin_top = 3.0
+margin_right = 265.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Eyes/Custom"]
+margin_left = 269.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "eyes"
+
+[node name="Mouth" type="VBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V"]
+margin_top = 268.0
+margin_right = 324.0
+margin_bottom = 362.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth"]
+margin_right = 324.0
+margin_bottom = 14.0
+text = "Lips"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth"]
+margin_top = 22.0
+margin_right = 324.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Type"]
+margin_right = 62.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Type"]
+margin_left = 66.0
+margin_right = 128.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "mouth"
+previous = true
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Type"]
+margin_left = 132.0
+margin_right = 195.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "mouth"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Type"]
+margin_left = 199.0
+margin_right = 324.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Standard" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth"]
+margin_top = 50.0
+margin_right = 324.0
+margin_bottom = 66.0
+
+[node name="a44c2e" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Standard"]
+margin_right = 50.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 20 )
+script = ExtResource( 1 )
+item_type = "mouth"
+my_color = Color( 0.643137, 0.298039, 0.180392, 1 )
+
+[node name="994220" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Standard"]
+margin_left = 54.0
+margin_right = 105.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 21 )
+script = ExtResource( 1 )
+item_type = "mouth"
+my_color = Color( 0.6, 0.258824, 0.12549, 1 )
+
+[node name="e26060" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Standard"]
+margin_left = 109.0
+margin_right = 160.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 22 )
+script = ExtResource( 1 )
+item_type = "mouth"
+my_color = Color( 0.886275, 0.376471, 0.376471, 1 )
+
+[node name="de4d4d" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Standard"]
+margin_left = 164.0
+margin_right = 214.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 23 )
+script = ExtResource( 1 )
+item_type = "mouth"
+my_color = Color( 0.870588, 0.301961, 0.301961, 1 )
+
+[node name="c43030" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Standard"]
+margin_left = 218.0
+margin_right = 269.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 24 )
+script = ExtResource( 1 )
+item_type = "mouth"
+my_color = Color( 0.768627, 0.188235, 0.188235, 1 )
+
+[node name="881919" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Standard"]
+margin_left = 273.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 25 )
+script = ExtResource( 1 )
+item_type = "mouth"
+my_color = Color( 0.533333, 0.0980392, 0.0980392, 1 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth"]
+margin_top = 74.0
+margin_right = 324.0
+margin_bottom = 94.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "mouth"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom"]
+margin_left = 153.0
+margin_right = 207.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 0.4
+script = ExtResource( 11 )
+item_type = "mouth"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom"]
+margin_left = 211.0
+margin_top = 3.0
+margin_right = 265.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom"]
+margin_left = 269.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "mouth"
+
+[node name="Browns" type="VBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V"]
+margin_top = 378.0
+margin_right = 324.0
+margin_bottom = 472.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns"]
+margin_right = 324.0
+margin_bottom = 14.0
+text = "Browns"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns"]
+margin_top = 22.0
+margin_right = 324.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Type"]
+margin_right = 62.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Type"]
+margin_left = 66.0
+margin_right = 128.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "browns"
+previous = true
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Type"]
+margin_left = 132.0
+margin_right = 195.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "browns"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Type"]
+margin_left = 199.0
+margin_right = 324.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Standard" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns"]
+margin_top = 50.0
+margin_right = 324.0
+margin_bottom = 66.0
+
+[node name="e39953" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Standard"]
+margin_right = 42.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 26 )
+script = ExtResource( 1 )
+item_type = "browns"
+my_color = Color( 0.890196, 0.6, 0.32549, 1 )
+
+[node name="aa5432" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Standard"]
+margin_left = 46.0
+margin_right = 89.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 27 )
+script = ExtResource( 1 )
+item_type = "browns"
+my_color = Color( 0.666667, 0.329412, 0.196078, 1 )
+
+[node name="6c3b18" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Standard"]
+margin_left = 93.0
+margin_right = 136.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 28 )
+script = ExtResource( 1 )
+item_type = "browns"
+my_color = Color( 0.423529, 0.231373, 0.0941176, 1 )
+
+[node name="3c261d" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Standard"]
+margin_left = 140.0
+margin_right = 183.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 29 )
+script = ExtResource( 1 )
+item_type = "browns"
+my_color = Color( 0.235294, 0.14902, 0.113725, 1 )
+
+[node name="451207" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Standard"]
+margin_left = 187.0
+margin_right = 230.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 30 )
+script = ExtResource( 1 )
+item_type = "browns"
+my_color = Color( 0.270588, 0.0705882, 0.027451, 1 )
+
+[node name="292929" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Standard"]
+margin_left = 234.0
+margin_right = 277.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 31 )
+script = ExtResource( 1 )
+item_type = "browns"
+my_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+
+[node name="141414" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Standard"]
+margin_left = 281.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 19 )
+script = ExtResource( 1 )
+item_type = "browns"
+my_color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns"]
+margin_top = 74.0
+margin_right = 324.0
+margin_bottom = 94.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "browns"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Custom"]
+margin_left = 153.0
+margin_right = 207.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "browns"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Custom"]
+margin_left = 211.0
+margin_top = 3.0
+margin_right = 265.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Browns/Custom"]
+margin_left = 269.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "browns"
+
+[node name="Hair" type="VBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V"]
+margin_top = 488.0
+margin_right = 324.0
+margin_bottom = 582.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair"]
+margin_right = 324.0
+margin_bottom = 14.0
+text = "Hair"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair"]
+margin_top = 22.0
+margin_right = 324.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Type"]
+margin_right = 48.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Type"]
+margin_left = 52.0
+margin_right = 101.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "hair"
+previous = true
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Type"]
+margin_left = 105.0
+margin_right = 154.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "hair"
+
+[node name="Remove" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Type"]
+margin_left = 158.0
+margin_right = 222.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "hair"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Type"]
+margin_left = 226.0
+margin_right = 324.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Standard" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair"]
+margin_top = 50.0
+margin_right = 324.0
+margin_bottom = 66.0
+
+[node name="e39953" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Standard"]
+margin_right = 42.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 26 )
+script = ExtResource( 1 )
+item_type = "hair"
+my_color = Color( 0.890196, 0.6, 0.32549, 1 )
+
+[node name="aa5432" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Standard"]
+margin_left = 46.0
+margin_right = 89.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 27 )
+script = ExtResource( 1 )
+item_type = "hair"
+my_color = Color( 0.666667, 0.329412, 0.196078, 1 )
+
+[node name="6c3b18" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Standard"]
+margin_left = 93.0
+margin_right = 136.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 28 )
+script = ExtResource( 1 )
+item_type = "hair"
+my_color = Color( 0.423529, 0.231373, 0.0941176, 1 )
+
+[node name="3c261d" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Standard"]
+margin_left = 140.0
+margin_right = 183.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 29 )
+script = ExtResource( 1 )
+item_type = "hair"
+my_color = Color( 0.235294, 0.14902, 0.113725, 1 )
+
+[node name="451207" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Standard"]
+margin_left = 187.0
+margin_right = 230.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 30 )
+script = ExtResource( 1 )
+item_type = "hair"
+my_color = Color( 0.270588, 0.0705882, 0.027451, 1 )
+
+[node name="292929" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Standard"]
+margin_left = 234.0
+margin_right = 277.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 31 )
+script = ExtResource( 1 )
+item_type = "hair"
+my_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+
+[node name="141414" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Standard"]
+margin_left = 281.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 19 )
+script = ExtResource( 1 )
+item_type = "hair"
+my_color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair"]
+margin_top = 74.0
+margin_right = 324.0
+margin_bottom = 94.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "hair"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Custom"]
+margin_left = 153.0
+margin_right = 207.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "hair"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Custom"]
+margin_left = 211.0
+margin_top = 3.0
+margin_right = 265.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/Hair/Custom"]
+margin_left = 269.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "hair"
+
+[node name="FacialHair" type="VBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V"]
+margin_top = 598.0
+margin_right = 324.0
+margin_bottom = 692.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair"]
+margin_right = 324.0
+margin_bottom = 14.0
+text = "Facial hair"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair"]
+margin_top = 22.0
+margin_right = 324.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Type"]
+margin_right = 48.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Type"]
+margin_left = 52.0
+margin_right = 101.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "facial"
+previous = true
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Type"]
+margin_left = 105.0
+margin_right = 154.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "facial"
+
+[node name="Remove" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Type"]
+margin_left = 158.0
+margin_right = 222.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "facial"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Type"]
+margin_left = 226.0
+margin_right = 324.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+color = Color( 1, 1, 1, 0 )
+
+[node name="Standard" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair"]
+margin_top = 50.0
+margin_right = 324.0
+margin_bottom = 66.0
+
+[node name="e39953" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Standard"]
+margin_right = 42.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 26 )
+script = ExtResource( 1 )
+item_type = "facial"
+my_color = Color( 0.890196, 0.6, 0.32549, 1 )
+
+[node name="aa5432" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Standard"]
+margin_left = 46.0
+margin_right = 89.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 27 )
+script = ExtResource( 1 )
+item_type = "facial"
+my_color = Color( 0.666667, 0.329412, 0.196078, 1 )
+
+[node name="6c3b18" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Standard"]
+margin_left = 93.0
+margin_right = 136.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 28 )
+script = ExtResource( 1 )
+item_type = "facial"
+my_color = Color( 0.423529, 0.231373, 0.0941176, 1 )
+
+[node name="3c261d" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Standard"]
+margin_left = 140.0
+margin_right = 183.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 29 )
+script = ExtResource( 1 )
+item_type = "facial"
+my_color = Color( 0.235294, 0.14902, 0.113725, 1 )
+
+[node name="451207" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Standard"]
+margin_left = 187.0
+margin_right = 230.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 30 )
+script = ExtResource( 1 )
+item_type = "facial"
+my_color = Color( 0.270588, 0.0705882, 0.027451, 1 )
+
+[node name="292929" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Standard"]
+margin_left = 234.0
+margin_right = 277.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 31 )
+script = ExtResource( 1 )
+item_type = "facial"
+my_color = Color( 0.160784, 0.160784, 0.160784, 1 )
+
+[node name="141414" type="Button" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Standard"]
+margin_left = 281.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+custom_styles/normal = SubResource( 19 )
+script = ExtResource( 1 )
+item_type = "facial"
+my_color = Color( 0.0784314, 0.0784314, 0.0784314, 1 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair"]
+margin_top = 74.0
+margin_right = 324.0
+margin_bottom = 94.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "facial"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Custom"]
+margin_left = 153.0
+margin_right = 207.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "facial"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Custom"]
+margin_left = 211.0
+margin_top = 3.0
+margin_right = 265.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/LeftControl/M/V/FacialHair/Custom"]
+margin_left = 269.0
+margin_right = 324.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "facial"
+
+[node name="Transparent" type="ColorRect" parent="CanvasLayer/C/HB"]
+margin_left = 344.0
+margin_right = 855.0
+margin_bottom = 800.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+color = Color( 0.0196078, 0.0313726, 0.0509804, 0 )
+
+[node name="RightControl" type="ColorRect" parent="CanvasLayer/C/HB"]
+margin_left = 859.0
+margin_right = 1200.0
+margin_bottom = 800.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.0196078, 0.0313726, 0.0509804, 1 )
+
+[node name="M" type="MarginContainer" parent="CanvasLayer/C/HB/RightControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 8
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 8
+
+[node name="S" type="ScrollContainer" parent="CanvasLayer/C/HB/RightControl/M"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 333.0
+margin_bottom = 792.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+
+[node name="V" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S"]
+margin_right = 325.0
+margin_bottom = 784.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 16
+
+[node name="Glasses" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+margin_right = 325.0
+margin_bottom = 70.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Glasses"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Type"]
+margin_right = 61.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Type"]
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "glasses"
+previous = true
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Type"]
+margin_left = 130.0
+margin_right = 191.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "glasses"
+
+[node name="Remove" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Type"]
+margin_left = 195.0
+margin_right = 259.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "glasses"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Type"]
+margin_left = 263.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses"]
+margin_top = 50.0
+margin_right = 325.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "glasses"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "glasses"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Glasses/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "glasses"
+
+[node name="Shirt" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+margin_top = 86.0
+margin_right = 325.0
+margin_bottom = 156.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Shirt"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 42.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Type"]
+margin_right = 61.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Type"]
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "shirt"
+previous = true
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Type"]
+margin_left = 130.0
+margin_right = 191.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "shirt"
+
+[node name="Remove" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Type"]
+margin_left = 195.0
+margin_right = 259.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "shirt"
+
+[node name="Push" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Type"]
+margin_left = 263.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt"]
+margin_top = 50.0
+margin_right = 325.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "shirt"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "shirt"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shirt/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "shirt"
+
+[node name="Pants" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+margin_top = 172.0
+margin_right = 325.0
+margin_bottom = 242.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Pants"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Type"]
+margin_right = 61.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev2" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Type"]
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "pants"
+previous = true
+
+[node name="Next2" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Type"]
+margin_left = 130.0
+margin_right = 191.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "pants"
+
+[node name="Remove2" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Type"]
+margin_left = 195.0
+margin_right = 259.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "pants"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Type"]
+margin_left = 263.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants"]
+margin_top = 50.0
+margin_right = 325.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "pants"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "pants"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Pants/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "pants"
+
+[node name="Bodysuits" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+margin_top = 258.0
+margin_right = 325.0
+margin_bottom = 328.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Body suit"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Type"]
+margin_right = 61.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev3" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Type"]
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "bodysuit"
+previous = true
+
+[node name="Next3" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Type"]
+margin_left = 130.0
+margin_right = 191.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "bodysuit"
+
+[node name="Remove3" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Type"]
+margin_left = 195.0
+margin_right = 259.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "bodysuit"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Type"]
+margin_left = 263.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits"]
+margin_top = 50.0
+margin_right = 325.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "bodysuit"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "bodysuit"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Bodysuits/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "bodysuit"
+
+[node name="Belts" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+margin_top = 344.0
+margin_right = 325.0
+margin_bottom = 414.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Belt"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Type"]
+margin_right = 61.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev4" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Type"]
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "belt"
+previous = true
+
+[node name="Next4" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Type"]
+margin_left = 130.0
+margin_right = 191.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "belt"
+
+[node name="Remove4" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Type"]
+margin_left = 195.0
+margin_right = 259.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "belt"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Type"]
+margin_left = 263.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts"]
+margin_top = 50.0
+margin_right = 325.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "belt"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "belt"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Belts/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "belt"
+
+[node name="Shoes" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+margin_top = 430.0
+margin_right = 325.0
+margin_bottom = 500.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Shoes"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Type"]
+margin_right = 61.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev5" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Type"]
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "shoes"
+previous = true
+
+[node name="Next5" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Type"]
+margin_left = 130.0
+margin_right = 191.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "shoes"
+
+[node name="Remove5" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Type"]
+margin_left = 195.0
+margin_right = 259.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "shoes"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Type"]
+margin_left = 263.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes"]
+margin_top = 50.0
+margin_right = 325.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "shoes"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "shoes"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Shoes/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "shoes"
+
+[node name="Mask" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+visible = false
+margin_top = 516.0
+margin_right = 313.0
+margin_bottom = 586.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask"]
+margin_right = 313.0
+margin_bottom = 14.0
+text = "Mask"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask"]
+margin_top = 22.0
+margin_right = 313.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Type"]
+margin_right = 58.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Type"]
+margin_left = 62.0
+margin_right = 120.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Type"]
+margin_left = 124.0
+margin_right = 182.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+
+[node name="Rmove" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Type"]
+margin_left = 186.0
+margin_right = 250.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Type"]
+margin_left = 254.0
+margin_right = 313.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask"]
+margin_top = 50.0
+margin_right = 313.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Custom"]
+margin_left = 37.0
+margin_right = 89.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "mask"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Custom"]
+margin_left = 93.0
+margin_top = 3.0
+margin_right = 145.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Custom"]
+margin_left = 149.0
+margin_right = 201.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "mask"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Custom"]
+margin_left = 205.0
+margin_top = 3.0
+margin_right = 257.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Mask/Custom"]
+margin_left = 261.0
+margin_right = 313.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "mask"
+
+[node name="CoatJacket" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+margin_top = 516.0
+margin_right = 325.0
+margin_bottom = 586.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Coat/Jacket"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Type"]
+margin_right = 61.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev6" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Type"]
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+script = ExtResource( 2 )
+item_type = "jacket"
+previous = true
+
+[node name="Next6" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Type"]
+margin_left = 130.0
+margin_right = 191.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+script = ExtResource( 2 )
+item_type = "jacket"
+
+[node name="Remove6" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Type"]
+margin_left = 195.0
+margin_right = 259.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+script = ExtResource( 3 )
+item_type = "jacket"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Type"]
+margin_left = 263.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket"]
+margin_top = 50.0
+margin_right = 325.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "jacket"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "jacket"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/CoatJacket/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "jacket"
+
+[node name="Cyber" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+margin_top = 602.0
+margin_right = 325.0
+margin_bottom = 648.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Cyberware"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 46.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type"]
+visible = false
+margin_right = 160.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type"]
+visible = false
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type"]
+visible = false
+margin_left = 82.0
+margin_right = 160.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+
+[node name="Rmove" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type"]
+visible = false
+margin_left = 109.0
+margin_right = 215.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+
+[node name="Cyber1" type="CheckBox" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type"]
+margin_right = 105.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Right arm"
+script = ExtResource( 4 )
+item_type = "cyber"
+
+[node name="Cyber2" type="CheckBox" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type"]
+margin_left = 109.0
+margin_right = 215.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Left arm"
+script = ExtResource( 4 )
+item_type = "cyber"
+item_number = 1
+
+[node name="Cyber3" type="CheckBox" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type"]
+margin_left = 219.0
+margin_right = 325.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Head"
+script = ExtResource( 4 )
+item_type = "cyber"
+item_number = 2
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type"]
+visible = false
+margin_left = 93.0
+margin_right = 325.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber"]
+visible = false
+margin_top = 54.0
+margin_right = 325.0
+margin_bottom = 74.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+color = Color( 0.964706, 0.964706, 0.964706, 1 )
+script = ExtResource( 10 )
+item_type = "cyber_1"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 11 )
+item_type = "cyberware"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 12 )
+item_type = "cyberware"
+
+[node name="Helmet" type="VBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V"]
+visible = false
+margin_top = 688.0
+margin_right = 325.0
+margin_bottom = 758.0
+custom_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet"]
+margin_right = 325.0
+margin_bottom = 14.0
+text = "Helmet"
+
+[node name="Type" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet"]
+margin_top = 22.0
+margin_right = 325.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Type"]
+margin_right = 61.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Type"
+
+[node name="Prev" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Type"]
+margin_left = 65.0
+margin_right = 126.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "<"
+
+[node name="Next" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Type"]
+margin_left = 130.0
+margin_right = 191.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = ">"
+
+[node name="Rmove" type="Button" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Type"]
+margin_left = 195.0
+margin_right = 259.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Remove"
+
+[node name="Push2" type="ColorRect" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Type"]
+margin_left = 263.0
+margin_right = 325.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 1, 1, 1, 0 )
+
+[node name="Custom" type="HBoxContainer" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet"]
+margin_top = 50.0
+margin_right = 325.0
+margin_bottom = 70.0
+
+[node name="Label" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Custom"]
+margin_top = 3.0
+margin_right = 33.0
+margin_bottom = 17.0
+text = "Color"
+
+[node name="Custom" type="ColorPickerButton" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Custom"]
+margin_left = 37.0
+margin_right = 91.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+script = ExtResource( 10 )
+item_type = "helmet"
+
+[node name="Label2" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Custom"]
+margin_left = 95.0
+margin_top = 3.0
+margin_right = 149.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Rough.:"
+align = 2
+
+[node name="Roughness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Custom"]
+margin_left = 153.0
+margin_right = 208.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 1.0
+script = ExtResource( 11 )
+item_type = "helmet"
+
+[node name="Label3" type="Label" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Custom"]
+margin_left = 212.0
+margin_top = 3.0
+margin_right = 266.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+text = "Metal.:"
+align = 2
+
+[node name="Metalness" type="HSlider" parent="CanvasLayer/C/HB/RightControl/M/S/V/Helmet/Custom"]
+margin_left = 270.0
+margin_right = 325.0
+margin_bottom = 16.0
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+script = ExtResource( 12 )
+item_type = "helmet"
+
+[connection signal="pressed" from="CanvasLayer/C/HB/LeftControl/M/V/File/Randomize" to="." method="_on_Randomize_pressed"]
+[connection signal="pressed" from="CanvasLayer/C/HB/LeftControl/M/V/File/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="CanvasLayer/C/HB/LeftControl/M/V/File/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="CanvasLayer/C/HB/LeftControl/M/V/Sex/Male" to="." method="_on_new_npc_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="CanvasLayer/C/HB/LeftControl/M/V/Sex/Female" to="." method="_on_new_npc_pressed" binds= [ 2 ]]
+[connection signal="color_changed" from="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom/Custom" to="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom/Custom" method="_on_FreeCloth_color_changed"]
+[connection signal="value_changed" from="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom/Roughness" to="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom/Roughness" method="_on_colorRough_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom/Metalness" to="CanvasLayer/C/HB/LeftControl/M/V/Mouth/Custom/Metalness" method="_on_colorMetal_value_changed"]
+[connection signal="toggled" from="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type/Cyber1" to="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type/Cyber1" method="_on_button_switch_toggled"]
+[connection signal="toggled" from="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type/Cyber2" to="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type/Cyber2" method="_on_button_switch_toggled"]
+[connection signal="toggled" from="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type/Cyber3" to="CanvasLayer/C/HB/RightControl/M/S/V/Cyber/Type/Cyber3" method="_on_button_switch_toggled"]
